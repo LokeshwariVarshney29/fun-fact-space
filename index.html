@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Fun Fact Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .fact-box {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rose Fun Fact Generator</h1>
+        <div id="fact" class="fact-box">Click the button to see a fun fact about roses!</div>
+        <button onclick="generateFact()">Generate Fact</button>
+    </div>
+    <script>
+        const roseFacts = [
+            "Roses are one of the most popular flowers in the world and are known for their beauty and fragrance.",
+            "There are over 300 species of roses and thousands of cultivars.",
+            "Roses can be found in a variety of colors, including red, pink, white, yellow, and even blue.",
+            "The rose is the national flower of the United States, the United Kingdom, and several other countries.",
+            "Roses have been symbols of love and beauty for centuries and are often associated with romance.",
+            "The rose plant belongs to the family Rosaceae.",
+            "Roses can grow as shrubs, climbers, or ground covers.",
+            "The rose hip, the fruit of the rose plant, is rich in vitamin C and is used in various culinary and medicinal applications.",
+            "Roses have been cultivated for over 5,000 years, with origins traced back to ancient China.",
+            "The world's oldest living rose bush is believed to be over 1,000 years old and is located in Hildesheim, Germany."
+        ];
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * roseFacts.length);
+            document.getElementById('fact').innerText = roseFacts[randomIndex];
+        }
+    </script>
+</body>
+</html>
