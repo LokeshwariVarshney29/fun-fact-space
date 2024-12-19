@@ -13,6 +13,7 @@
             background-image: url('rose.jpg'); /* Static full background image */
             background-size: cover;
             background-position: center;
+            position: relative; /* Added for better stacking context */
         }
 
         .container {
@@ -56,7 +57,7 @@
             transform: scale(1.05);
         }
 
-        /* Rose petals animation */
+        /* Floating rose petals */
         .floating-petals {
             position: fixed;
             top: 0;
@@ -64,7 +65,7 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: 1;
+            z-index: 5; /* Ensure petals are above background and text */
             overflow: hidden;
         }
 
@@ -72,11 +73,12 @@
             position: absolute;
             width: 50px;
             height: 50px;
-            background-image: url('rosepetals.png'); /* Updated for PNG */
+            background-image: url('rosepetals.png');
             background-size: contain;
             background-repeat: no-repeat;
             opacity: 0.8;
             animation: float 8s linear infinite;
+            z-index: 5; /* Ensure individual petals are above everything else */
         }
 
         @keyframes float {
