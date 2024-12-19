@@ -71,8 +71,8 @@
 
         .petal {
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 80px; /* Increased size */
+            height: 80px; /* Increased size */
             background-image: url('rosepetals.png'); /* Updated for PNG */
             background-size: contain;
             background-repeat: no-repeat;
@@ -127,12 +127,12 @@
 
         // Generate floating petals
         const petalsContainer = document.getElementById('petals-container');
-        const petalCount = 20; // Number of petals
+        const petalCount = 30; // Increased number of petals
 
         for (let i = 0; i < petalCount; i++) {
             const petal = document.createElement('div');
             petal.classList.add('petal');
-            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.left = Math.random() * 100 + 'vw'; // Spread across the screen horizontally
             petal.style.animationDuration = Math.random() * 3 + 6 + 's'; // Random duration between 6-9 seconds
             petal.style.animationDelay = Math.random() * 5 + 's'; // Random delay
             petalsContainer.appendChild(petal);
